@@ -41,8 +41,8 @@ function Board() {
 
   return (
     <>
-      <div className='status'>{status}</div>
-      <div className='board-row'>
+      <div className='status bg-red-700'>{status}</div>
+      <div className='board-row bg-red-700'>
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
         <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
