@@ -1,15 +1,15 @@
 import React from 'react';
 import { useState } from 'react'
 
-function Welcolme() {
+function Welcome() {
     
   
     return (
       <>
-      <div>ayo</div>
+      <div className='text-9xl'>ayo</div>
   
       </>
     )
   }
 
-  export default Welcolme
+  export default Welcome

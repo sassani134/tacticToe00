@@ -6,7 +6,7 @@ function Rockpaperscissors() {
   
     return (
       <>
-      <div>ayo</div>
+      <div>Rockpaperscissors</div>
   
       </>
     )

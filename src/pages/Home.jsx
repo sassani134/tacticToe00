@@ -6,7 +6,7 @@ function Home() {
   
     return (
       <>
-      <div>ayo</div>
+      <div>Home</div>
   
       </>
     )
