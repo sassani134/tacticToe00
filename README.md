@@ -18,3 +18,7 @@ je m'arrete a https://react.dev/learn/tutorial-tic-tac-toe#adding-time-travel
 
 un tic-tac-toe, encore un.
 Devoir du cours de React.
+
+### 24 25 26 Septembre 2024
+
+J'ai rajouter les choses liée au consigne et plus.
