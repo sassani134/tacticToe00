@@ -2,9 +2,12 @@ import { useState } from 'react'
 import reactLogo from '../assets/react.svg'
 import viteLogo from '/vite.svg'
 import '../assets/App.css'
+import { useContext } from 'react'
+import { FormContext } from './FormContext'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { player1Value, player2Value, player1ScoreT3, player2ScoreT3,  setPlayer1ScoreT3, setPlayer2ScoreT3, } = useContext(FormContext);
+
 
   return (
     <>
@@ -41,8 +44,8 @@ function Board() {
 
   return (
     <>
-      <div className='status bg-red-700'>{status}</div>
-      <div className='board-row bg-red-700'>
+      <div className='bg-red-700 status'>{status}</div>
+      <div className='bg-red-700 board-row'>
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
         <Square value={squares[2]} onSquareClick={() => handleClick(2)} />

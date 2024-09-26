@@ -1,8 +1,20 @@
 import React from 'react';
-import { useState } from 'react'
+import { useContext } from 'react';
+import { FormContext } from './FormContext';
 
 function Rockpaperscissors() {
     
+  const { player1Value, player2Value, player1ScoreRps, player2ScoreRps,  setPlayer1ScoreRps, setPlayer2ScoreRps, } = useContext(FormContext);
+
+
+
+  const handleWin1 = () => {
+    setPlayer1ScoreRps(player1ScoreRps + 1);
+  };
+
+  const handleWin2 = () => {
+    setPlayer2ScoreRps(player2ScoreRps + 1);
+  };
   
     return (
       <>
@@ -25,6 +37,44 @@ function Rockpaperscissors() {
     </p>
   </div>
 
+
+
+
+
+
+
+
+
+
+
+  <div class="overflow-x-auto">
+        <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+            <thead class="ltr:text-left rtl:text-right">
+            <tr>
+                <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Player</th>
+                <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Rock Paper Scicssors</th>
+            </tr>
+            </thead>
+
+            <tbody class="divide-y divide-gray-200">
+            <tr>
+                <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">{player1Value}</td>
+                <td class="whitespace-nowrap px-4 py-2 text-gray-700">{player1ScoreRps}</td>
+            </tr>
+
+            <tr>
+            <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">{player2Value}</td>
+                <td class="whitespace-nowrap px-4 py-2 text-gray-700">{player2ScoreRps}</td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+
+        <div className='flex flex-row gap-5'>
+          <button onClick={handleWin1}>{player1Value} a gagner</button>
+          <button onClick={handleWin2}>{player2Value} a gagner</button>
+
+        </div>
   
       </>
     )
